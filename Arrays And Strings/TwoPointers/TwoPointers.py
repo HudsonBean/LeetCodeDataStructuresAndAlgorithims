@@ -2,16 +2,17 @@
 
 # In this program we will create a palindrome checker
 
-def checkIfPalindrome(word: str):
-    left = 0
-    right = len(word) - 1
-    while (left < right):
-        if (word[left] != word[right]):
+# This function takes a string and checks if it's a palindrome
+def checkIfPalindrome(word: str) -> bool:
+    left = 0  # First index of the list
+    right = len(word) - 1  # Last index of the list
+    while (left < right):  # Check if they aren't at the middle of the string yet
+        if (word[left] != word[right]):  # If one of the letters don't match then return false
             return False
         else:
-            left += 1
+            left += 1  # Increment left and right
             right -= 1
-        return True
+        return True  # Is palindrome
 
 
 print(checkIfPalindrome("racecar"))
